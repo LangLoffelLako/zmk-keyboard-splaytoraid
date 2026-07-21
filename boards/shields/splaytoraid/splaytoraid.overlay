@@ -10,7 +10,6 @@
     chosen {
         zmk,kscan = &kscan_left;
         zmk,matrix_transform = &default_transform;
-        zmk,underglow = &underglow;
     };
 
     default_transform: keymap_transform_0 {
@@ -65,13 +64,5 @@
 		status = "okay";
         sensors = <&center_encoder>;
 	};
-
-    underglow: underglow {
-        compatible = "worldsemi,ws2812-gpio";
-        chain-length = <18>;
-        color-mapping = <1 0 2>; /* G R B */
-        in-gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
-        status = "okay";
-    };
 
 };
