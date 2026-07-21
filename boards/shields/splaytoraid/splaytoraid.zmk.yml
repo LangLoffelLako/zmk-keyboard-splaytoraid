@@ -1,0 +1,11 @@
+file_format: "1"
+id: splaytoraid
+name: SPLAYTORAID
+type: shield
+url: https://github.com/langloffellako/zmk-keyboard-splaytoraid
+requires: 
+  - pro_micro
+features:
+  - keys
+  - underglow
+  - encoder
