@@ -55,7 +55,6 @@
         };
         umlaut_ht: umlaut_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "UMLAUT_HOLD_TAP";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
@@ -64,7 +63,6 @@
         };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
@@ -73,7 +71,6 @@
         };
         hl: homerow_layers {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYERS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <150>;
@@ -82,21 +79,18 @@
         };
         eurollar: euro_dollar {
                 compatible = "zmk,behavior-mod-morph";
-                label = "EUROLLAR";
                 #binding-cells = <0>;
                 bindings = <&kp RA(E)>, <&kp LS(N4)>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         parens: parentheses {
                 compatible = "zmk,behavior-mod-morph";
-                label = "PARENTHESES";
                 #binding-cells = <0>;
                 bindings = <&kp LS(N8)>, <&kp LS(N9)>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         curlies: curly_brackets {
                 compatible = "zmk,behavior-mod-morph";
-                label = "CURLY_BRACKETS";
                 #binding-cells = <0>;
                 bindings = <&kp RA(N7)>, <&kp RA(N0)>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -104,7 +98,6 @@
         };
         squares: square_brackets {
                 compatible = "zmk,behavior-mod-morph";
-                label = "SQUARE_BRACKETS";
                 #binding-cells = <0>;
                 bindings = <&kp RA(N8)>, <&kp RA(N9)>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -112,7 +105,6 @@
         };
         mac_curlies: mac_curly_brackets {
                 compatible = "zmk,behavior-mod-morph";
-                label = "MAC_CURLY_BRACKETS";
                 #binding-cells = <0>;
                 bindings = <&kp mac_open_curly>, <&kp mac_close_curly>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -120,7 +112,6 @@
         };
         mac_squares: mac_square_brackets {
                 compatible = "zmk,behavior-mod-morph";
-                label = "MAC_SQUARE_BRACKETS";
                 #binding-cells = <0>;
                 bindings = <&kp mac_open_square>, <&kp mac_close_square>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
