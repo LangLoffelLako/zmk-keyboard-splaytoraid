@@ -137,7 +137,7 @@
     &caps_word  &kp X       &kp V       &kp L        &kp C              &kp W                    /*split*/  &kp K               &kp H        &kp G       &kp F       &kp Q      &caps_word
     &mo ADJUST  &hm LGUI U  &hm LALT O  &hm LCTRL A  &hm LSHFT E        &kp I                    /*split*/  &kp S               &hm RSHFT N  &hm RCTRL R &hm RALT T  &hm RGUI D &tog WIN
                 &kp Z       &kp RA(L)   &kp SLASH    &kp P              &kp Y                    /*split*/  &kp B               &kp M        &kp COMMA   &kp DOT     &kp J 
-                                        &hl FUNC ESC &hl MAC_SYM SPACE  &hl MAC_NUM TAB          &none      &umlaut_ht RET UMLAUT      &hl NAV BSPC &kp DEL
+                                        &hl FUNC ESC &hl MAC_SYM SPACE  &hl MAC_NUM TAB          &none      &hl RET UMLAUT      &hl NAV BSPC &kp DEL
 
                         >;
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
