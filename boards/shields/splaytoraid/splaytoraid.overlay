@@ -71,9 +71,9 @@
     underglow: underglow {
         compatible = "worldsemi,ws2812-gpio";
         chain-length = <18>;
-        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+        color-mapping = <1 0 2>; /* G R B */
         gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
         status = "okay";
     };
-    
+
 };
