@@ -298,7 +298,7 @@ function_layer {
 //          -----------------------------------------               -----------------------------------------
 // ---------|       |       |       |       |       |     split     |       |       |       |       |       |---------
 // |        |----------------------------------------               ----------------------------------------|        |
-// ---------|   ü   |   ö   |   ä   |       |   ß   |     split     |   ß   |  SHFT |  CTRL |  ALT  |  GUI  |---------
+// ---------|   ü   |   ö   |   ä   |       |       |     split     |   ß   |  SHFT |  CTRL |  ALT  |  GUI  |---------
 // |        |----------------------------------------               ----------------------------------------|        |
 // ---------|       |       |       |       |       |     split     |       |       |       |       |       |---------
 //          -------------------------------------------------------------------------------------------------
@@ -306,7 +306,7 @@ function_layer {
 //                          -----------------------------------------------------------------
       bindings = <
     &none &none  &none   &none   &none &none  /*split*/ &none   &none     &none     &none    &none    &none
-    &none &kp UE &kp OE  &kp AE  &none &kp SS /*split*/ &kp SS  &kp LSHFT &kp LCTRL &kp LALT &kp LGUI &none
+    &none &kp UE &kp OE  &kp AE  &none &none  /*split*/ &kp SS  &kp LSHFT &kp LCTRL &kp LALT &kp LGUI &none
           &none  &none   &none   &none &none  /*split*/ &none   &none     &none     &none    &none 
                                 &none   &none  &none    &none   &none     &none     &none
 
