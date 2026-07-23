@@ -44,23 +44,6 @@
 
 / {
         behaviors {
-        /* Umlaut: tap = sticky layer (next key only), hold = RET.
-         * sl_umlaut has 220ms window for slight flexibility. */
-        sl_umlaut: sticky_layer_umlaut {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-            release-after-ms = <220>;
-            bindings = <&mo>;
-            quick-release;
-        };
-        umlaut_ht: umlaut_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&sl_umlaut>;
-        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -76,6 +59,15 @@
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
+        };
+        /* Hold = sticky layer (&sl), tap = key. */
+        hsl: homerow_sticky_layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&sl>, <&kp>;
         };
         eurollar: euro_dollar {
                 compatible = "zmk,behavior-mod-morph";
@@ -137,7 +129,7 @@
     &caps_word  &kp X       &kp V       &kp L        &kp C              &kp W                    /*split*/  &kp K               &kp H        &kp G       &kp F       &kp Q      &caps_word
     &mo ADJUST  &hm LGUI U  &hm LALT O  &hm LCTRL A  &hm LSHFT E        &kp I                    /*split*/  &kp S               &hm RSHFT N  &hm RCTRL R &hm RALT T  &hm RGUI D &tog WIN
                 &kp Z       &kp RA(L)   &kp SLASH    &kp P              &kp Y                    /*split*/  &kp B               &kp M        &kp COMMA   &kp DOT     &kp J 
-                                        &hl FUNC ESC &hl MAC_SYM SPACE  &hl MAC_NUM TAB          &none      &hl UMLAUT RET      &hl NAV BSPC &kp DEL
+                                        &hl FUNC ESC &hl MAC_SYM SPACE  &hl MAC_NUM TAB          &none      &hsl UMLAUT RET     &hl NAV BSPC &kp DEL
 
                         >;
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
